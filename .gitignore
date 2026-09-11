@@ -36,3 +36,4 @@ docker-compose.override.yml
 Thumbs.db
 UPDATE_README/  
 .neon
+renderlogs/

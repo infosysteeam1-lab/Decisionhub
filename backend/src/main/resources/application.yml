@@ -38,7 +38,7 @@ spring:
     url: ${SPRING_DATASOURCE_URL:jdbc:h2:file:./data/decisionhub_db;DB_CLOSE_DELAY=-1;MODE=MySQL;CASE_INSENSITIVE_IDENTIFIERS=TRUE}
     username: ${SPRING_DATASOURCE_USERNAME:sa}
     password: ${SPRING_DATASOURCE_PASSWORD:}
-    driver-class-name: ${SPRING_DATASOURCE_DRIVER:${SPRING_DATASOURCE_DRIVER_CLASS_NAME:#{null}}}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER:${SPRING_DATASOURCE_DRIVER_CLASS_NAME:org.postgresql.Driver}}
     hikari:
       connection-timeout: ${HIKARI_CONNECTION_TIMEOUT:30000}
       initialization-fail-timeout: ${HIKARI_INIT_FAIL_TIMEOUT:60000}
@@ -56,11 +56,11 @@ spring:
     hibernate:
       ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
     show-sql: false
-    database-platform: ${SPRING_JPA_DATABASE_PLATFORM:#{null}}
+    database-platform: ${SPRING_JPA_DATABASE_PLATFORM:org.hibernate.dialect.PostgreSQLDialect}
     properties:
       hibernate:
         format_sql: false
-        dialect: ${HIBERNATE_DIALECT:#{null}}
+        dialect: ${HIBERNATE_DIALECT:org.hibernate.dialect.PostgreSQLDialect}
         temp:
           use_jdbc_metadata_defaults: false
     open-in-view: true
