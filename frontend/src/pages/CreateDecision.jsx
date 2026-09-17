@@ -557,6 +557,8 @@ export default function CreateDecision() {
                     </motion.div>
                   )}
                 </AnimatePresence>
+              </div>
+
               {/* Media & Document Attachments Card */}
               <div className="rounded-[2rem] border border-default bg-surface p-6 shadow-sm space-y-4">
                 <div className="flex flex-wrap items-center justify-between gap-2">

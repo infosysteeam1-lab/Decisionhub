@@ -181,6 +181,8 @@ export default function AdminPage() {
     } finally {
       setActionLoading(null);
     }
+  };
+
   const handleCancelDeletionAdmin = async (userId) => {
     setActionLoading(`cancel-del-${userId}`);
     try {
